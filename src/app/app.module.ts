@@ -7,10 +7,18 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { PokemonViewComponentComponent } from './components/pokemon-view-component/pokemon-view-component.component';
+import { PokeballSelectorComponentComponent } from './components/pokeball-selector-component/pokeball-selector-component.component';
+import { HomeComponent } from './views/home/home.component';
+import { GrassComponent } from './views/grass/grass.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PokemonViewComponentComponent,
+    PokeballSelectorComponentComponent,
+    HomeComponent,
+    GrassComponent
   ],
   imports: [
     BrowserModule,
