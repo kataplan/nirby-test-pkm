@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pokemon-nirby": {
+      "hosting": {
+        "nirby-test-pkm": [
+          "pokemon-nirby"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pokemon-nirby"
+  }
+}
