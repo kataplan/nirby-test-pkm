@@ -1,0 +1,86 @@
+$font-family: "lato", "Roboto", sans-serif;
+$blue: #25b93e;
+$dark-green: #0a3511;
+$red: #ee1515;
+$white: #fff;
+$pkball-white:#F0F0F0; 
+$grey: #707070;
+$black: #020202;
+
+:root {
+    --transition: background-color 0.5s;
+    --body-bg: $white;
+    --body-fg: #{$white};
+    --accent: #{$red};
+    --link-color: #{$red};
+    --text-color: #{$dark-green};
+    --text-alternative: #{$blue};
+    --decor: #{$red};
+
+    @media (prefers-color-scheme: dark) {
+        --body-bg: #{$blue};
+        --body-fg: #{$dark-green};
+        --accent: #{$red};
+        --link-color: #{$red};
+        --text-color: #{$white};
+        --text-alternative: #{$grey};
+        --decor: #{$white};
+    }
+}
+:root.light {
+    --body-bg: #{$white};
+    --body-fg: #{$white};
+    --accent: #{$red};
+    --link-color: #{$red};
+    --text-color: #{$dark-green};
+    --text-alternative: #{$blue};
+    --decor: #{$red};
+}
+:root.dark {
+    --body-bg: #{$blue};
+    --body-fg: #{$dark-green};
+    --accent: #{$red};
+    --link-color: #{$red};
+    --text-color: #{$white};
+    --text-alternative: #{$grey};
+    --decor: #{$white};
+}
+* {
+    transition: var(--transition);
+}
+
+*,
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--body-bg);
+}
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#app {
+    background: var(--body-bg);
+    letter-spacing: 0.24px;
+    color: var(--text-color);
+    font-family: $font-family;
+    font-size: 1.5rem;
+}
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+}
