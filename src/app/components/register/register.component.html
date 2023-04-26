@@ -1,0 +1,23 @@
+<h3 class="mb-5">¡Registra tu cuenta!</h3>
+<div class="d-flex align-items-center align-items-md-start justify-content-md-between w-100 flex-column flex-md-row gap-3 ">
+    <div>
+        <img src="../../../assets/images/pokemon-go.png" class="register_img" alt="trainer">
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onRegisterSubmit()" class="register_form w-100 pb-3">
+        <div class="d-flex flex-column gap-1 mb-3">
+            <label htmlFor="username">Correo</label>
+            <input pInputText id="username" formControlName="email" />
+        </div>
+        <div class="d-flex flex-column gap-1 mb-3">
+            <label htmlFor="password">Contraseña</label>
+            <input pInputText id="password" type="password" formControlName="password" />
+        </div>
+
+        <p-button label="Registrar cuenta"  type="submit"></p-button>
+     
+        <p-divider></p-divider>   
+
+        <p-button  label="Registrar sesión con google" icon="pi pi-google" styleClass=" p-button-secondary "  (onClick)="onGoogleSignIn()"></p-button>
+    </form>
+    
+</div>
