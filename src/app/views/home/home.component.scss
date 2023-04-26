@@ -1,0 +1,14 @@
+.home{
+    align-items: center;
+    background: url('../../../assets/images/pokemon-center.webp') no-repeat center;
+    background-size: cover;
+
+    &_container{
+        background-color: var(--body-bg);
+        padding: 50px 3% 0;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 700px;
+    } 
+    
+}
