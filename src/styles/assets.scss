@@ -1,11 +1,11 @@
 $font-family: "lato", "Roboto", sans-serif;
-$blue: #25b93e;
-$dark-green: #0a3511;
+$warm-grey: #3b2b2b;
+$dark-warm-grey: #1a0f0f;
 $red: #ee1515;
 $white: #fff;
 $pkball-white:#F0F0F0; 
-$grey: #707070;
-$black: #020202;
+$grey: #3a3a3a;
+$black: #222224;
 
 :root {
     --transition: background-color 0.5s;
@@ -13,13 +13,13 @@ $black: #020202;
     --body-fg: #{$white};
     --accent: #{$red};
     --link-color: #{$red};
-    --text-color: #{$dark-green};
-    --text-alternative: #{$blue};
+    --text-color: #{$dark-warm-grey};
+    --text-alternative: #{$warm-grey};
     --decor: #{$red};
 
     @media (prefers-color-scheme: dark) {
-        --body-bg: #{$blue};
-        --body-fg: #{$dark-green};
+        --body-bg: #{$grey};
+        --body-fg: #{$dark-warm-grey};
         --accent: #{$red};
         --link-color: #{$red};
         --text-color: #{$white};
@@ -32,13 +32,13 @@ $black: #020202;
     --body-fg: #{$white};
     --accent: #{$red};
     --link-color: #{$red};
-    --text-color: #{$dark-green};
-    --text-alternative: #{$blue};
+    --text-color: #{$dark-warm-grey};
+    --text-alternative: #{$warm-grey};
     --decor: #{$red};
 }
 :root.dark {
-    --body-bg: #{$blue};
-    --body-fg: #{$dark-green};
+    --body-bg: #{$grey};
+    --body-fg: #{$dark-warm-grey};
     --accent: #{$red};
     --link-color: #{$red};
     --text-color: #{$white};
@@ -47,6 +47,7 @@ $black: #020202;
 }
 * {
     transition: var(--transition);
+    color: var(--text-color);
 }
 
 *,
@@ -78,9 +79,4 @@ button {
     border: none;
     cursor: pointer;
 }
-.input {
-    background: transparent;
-    border: none;
-    outline: none;
-    color: var(--text-color);
-}
+
