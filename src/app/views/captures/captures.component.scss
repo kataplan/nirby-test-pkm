@@ -1,0 +1,17 @@
+.capture{
+    margin: 5% 0;
+    &_grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        
+        gap: 20px;
+    }
+
+}
+img{
+    width: 100%;
+    max-width: 150px;
+}
+h1{
+    color:var(--text-color)
+}

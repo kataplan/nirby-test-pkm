@@ -1,0 +1,27 @@
+<div class="d-flex align-items-center flex-column w-100 px-5">
+    <div  class="w-100 d-flex justify-content-center gap-5" >
+        <p-button  label="Gotta cath'em all" styleClass=" p-button-primary " (onClick)="navigate('grass')"></p-button>
+        <p-button  label="logout" styleClass=" p-button-secondary " (onClick)="logout()"></p-button>
+    </div>
+    <h1 class="mb-4 mt-3">Tus Capturas</h1>
+    <div class="capture_grid w-100 ">
+        <div class="card d-flex justify-content-between h-100 " *ngFor="let item of captureList">
+            <p-card [style]="{ width: '100%', height:'100%'}" class="h-100" >
+                <div class="w-100 d-flex justify-content-center">
+                    <img alt="Card" src={{item.pokemonImageUrl}} />
+                </div>
+                <h3>{{ item.pokemonName | titlecase }}</h3>
+                <h5>Tipos:</h5>
+                <span *ngFor="let type of item.pokemonType">
+                    {{type}}
+                </span>
+                <h5 class="mt-3">Hora de captura:</h5>
+                <div> {{item.captureTime | date:'dd/MM/YYYY hh:mm'}}</div>
+                <ng-template pTemplate="footer">
+                    <p-button label="Liberar" icon="pi pi-times" (onClick)="liberatePokemon(item)"></p-button>
+                </ng-template>
+            </p-card>
+        </div>
+    </div>
+
+</div>
