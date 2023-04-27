@@ -1,13 +1,27 @@
 export interface Pokemon {
-    id:number,
-    name:string,
-    types:Array<string>
-    sprites:{
-        front_default:string
+    pokemonId: number,
+    pokemonName: string,
+    pokemonType: Array<string>,
+    pokemonImageUrl: string
+}
+export interface IPokemonRaw {
+    id: number,
+    name: string,
+    types: Array<type>
+    sprites: {
+        front_default: string
     }
 }
 
 export interface IPokemonResult {
-    name: string;  
+    name: string;
     url: string;
-  }
+}
+
+export interface type {
+    slot: number,
+    type: {
+        name: string,
+        url: string,
+    }
+}
