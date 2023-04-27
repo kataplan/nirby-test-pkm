@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/services/auth.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -6,15 +9,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  login = true
-  message = "¿No tienes cuenta? Registrate aquí"
+  login:Boolean = true
+  showForms:Boolean = false
+  message:String = "¿No tienes cuenta? Registrate aquí"
   constructor(
-
+    private authServices: AuthService,
+    private router: Router,
   ) { }
-
-  changeMessage(){
+  
+  ngOnInit() {
+    this.authServices.getUserStatus().subscribe((val)=>{
+      if(val){
+        this.showForms = true
+      }
+    })
+  }
+  
+  navigate(str:String){
+    this.router.navigate([str])
+  }
+  changeMessage() {
     this.login = !this.login
-    this.login ? this.message="¿No tienes cuenta? Registrate aquí": this.message="¿Ya tienes cuenta? Inicia sesión aquí"
-    
+    this.login ? this.message = "¿No tienes cuenta? Registrate aquí" : this.message = "¿Ya tienes cuenta? Inicia sesión aquí"
+
   }
 }

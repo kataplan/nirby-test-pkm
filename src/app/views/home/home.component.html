@@ -1,12 +1,28 @@
-<div class="home d-flex vh-100 vw-100 justify-content-center align-items-center flex-column">
-    <div class="home_container">
-        <button (click)="changeMessage()" class="mb-2">{{message}}</button>
-        <div *ngIf="login; else elseBlock">
-            <app-login></app-login>
+<div *ngIf="showForms;" class="home d-flex vh-100 vw-100 justify-content-center align-items-center flex-column">
+    <div class="home_container w-100 h-50 d-flex justify-content-around align-items-center flex-column">
+        <div>
+            <h2>¡Hola entrenador!</h2>
+            <h3>¿que quieres hacer?</h3>
         </div>
-        <ng-template #elseBlock>
-            <app-register></app-register>
-        </ng-template>
+        <p-button label="Gotta cath'em all" icon="pi pi-bolt" styleClass=" p-button-primary"
+            (onClick)="navigate('/grass')"></p-button>
+        <p-button label="Capture History" icon="pi pi-book" styleClass=" p-button-secondary"
+            (onClick)="navigate('/captures')"></p-button>
+
     </div>
-    
+</div>
+<div *ngIf="!showForms;" class="home d-flex vh-100 vw-100">
+    <div class=" d-flex vh-100 vw-100 justify-content-center align-items-center flex-column">
+        <div class="home_container">
+            <button (click)="changeMessage()" class="mb-2">{{message}}</button>
+            <div *ngIf="login; else elseBlock">
+                <app-login></app-login>
+            </div>
+            <ng-template #elseBlock>
+                <app-register></app-register>
+            </ng-template>
+        </div>
+
+    </div>
+
 </div>
