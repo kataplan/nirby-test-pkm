@@ -1,1 +1,8 @@
-<p>grass works!</p>
+<div class="grass d-flex vh-100 vw-100 justify-content-between align-items-center flex-column">
+    <div class="w-100 d-flex justify-content-center gap-5 ">
+        <p-button  label="Capture History" styleClass=" p-button-primary " (onClick)="navigate('captures')"></p-button>
+        <p-button  label="logout" styleClass=" p-button-secondary " (onClick)="logout()"></p-button>
+    </div>
+    <app-pokemon-view-component class="w-100"></app-pokemon-view-component>
+    <app-pokeball-selector-component></app-pokeball-selector-component>
+</div>

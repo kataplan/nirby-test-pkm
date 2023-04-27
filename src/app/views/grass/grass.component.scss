@@ -1,0 +1,14 @@
+.grass {
+    align-items: center;
+    background: url("../../../assets/images/background-hero.png") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    &_container {
+        background-color: var(--body-bg);
+        padding: 50px 3% 0;
+        border-radius: 15px;
+        width: 100%;
+        max-width: 700px;
+    }
+    
+}
