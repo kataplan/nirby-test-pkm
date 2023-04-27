@@ -8,7 +8,6 @@ import { CapturesComponent } from './views/captures/captures.component';
 const routes: Routes = [
   {
     path: '', component: HomeComponent,
-    ...canActivate(() => redirectLoggedInTo(['/grass']))
   },
   {
     path: 'grass', component: GrassComponent,
