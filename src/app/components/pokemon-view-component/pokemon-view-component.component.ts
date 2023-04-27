@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PokemonService } from 'src/services/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-view-component',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./pokemon-view-component.component.scss']
 })
 export class PokemonViewComponentComponent {
+  
+  constructor(
+    public pokemonServices: PokemonService,
+
+  ) { }
+ 
 
 }

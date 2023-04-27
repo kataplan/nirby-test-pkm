@@ -1,1 +1,9 @@
-<p>pokemon-view-component works!</p>
+<div *ngIf="this.pokemonServices.currentPokemon.pokemonId> 0" class="pokemon d-flex flex-column align-items-center">
+    <h3 class="pokemon_name">{{this.pokemonServices.currentPokemon.pokemonName}}</h3>
+    <img src={{this.pokemonServices.currentPokemon.pokemonImageUrl}} alt="" class="w-100 pokemon_image">
+    <div class="w-100 d-flex justify-content-around pokemon_types">
+        <ng-container *ngFor="let item of this.pokemonServices.currentPokemon.pokemonType">
+            <h4>{{item}}</h4>
+        </ng-container>
+    </div>
+</div>

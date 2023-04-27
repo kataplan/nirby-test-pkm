@@ -1,0 +1,23 @@
+.pokemon {
+    width: 100%;
+    &_image {
+        max-width: 300px;
+        width: 100%;
+    }
+    &_name,&_types{
+        background-color: var(--body-bg);
+        color: var(--text-color);
+        width: 100%;
+        text-align: center;
+        max-width: 300px;
+        border-radius: 15px;
+        border: var(--accent) 1px solid;
+        padding: 5px 0;
+        text-transform:capitalize;
+    }
+}
+h4{
+    margin: 0;
+    padding: 0;
+ 
+}
