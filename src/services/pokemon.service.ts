@@ -8,8 +8,22 @@ import { Pokemon } from 'src/interfaces/pokemon';
 })
 export class PokemonService {
   private URL = "https://pokeapi.co/api/v2/"
+  maxId:number = 0
+  currentPokemon: Pokemon = {
+    id: 0,
+    types: [""],
+    name: "",
+    sprites:{front_default:""}
+
+  };
   constructor(private http: HttpClient) { }
 
+  public setMaxId(id:number):void{
+    this.maxId=id
+  }
+  public setCurrentPokemon(pokemon:Pokemon):void{
+    this.currentPokemon=pokemon
+  }
   public getPokemon(index:number):Observable<Pokemon>{
     return this.http.get<Pokemon>(`${this.URL}pokemon/${index}`)
   }
