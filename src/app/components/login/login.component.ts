@@ -23,16 +23,10 @@ export class LoginComponent {
 
   onLoginSubmit(): void {
     this.authServices.login(this.loginForm.value)
-      .then(() => {
-        this.router.navigate(['/grass'])
-      })
-    console.log(this.loginForm.value)
     this.loginForm.reset();
   }
   onGoogleSignIn(): void {
     this.authServices.loginWithGoogle()
-      .then(() => {
-        this.router.navigate(['/grass'])
-      })
+    this.loginForm.reset();
   }
 }

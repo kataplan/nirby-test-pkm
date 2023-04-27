@@ -1,10 +1,14 @@
 .login{
-
     &_img{
     width: 100%;
     max-width: 400px;
     }
     &_form{
+        color: var(--text-color);
         max-width: 300px;
     }
+}
+h3{
+    color: var(--text-color);
+
 }
