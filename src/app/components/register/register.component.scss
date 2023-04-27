@@ -1,13 +1,20 @@
-.register{
-    &_title{
+.register {
+    &_title {
         margin-right: 5%;
     }
-    &_img{
-    width: 100%;
-    max-width: 400px;
+    &_img {
+        width: 100%;
+        max-width: 400px;
     }
-    &_form{
+    &_form {
         max-width: 300px;
         margin-right: 5%;
+        color: var(--text-color);
     }
+}
+h3 {
+    color: var(--text-color);
+}
+.p-button-label {
+    color: var(--text-color);
 }
