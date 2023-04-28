@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokeballSelectorComponentComponent } from './pokeballSelector.component';
+import { PokeballSelectorComponent } from './pokeballSelector.component';
 
 describe('PokeballSelectorComponentComponent', () => {
-  let component: PokeballSelectorComponentComponent;
-  let fixture: ComponentFixture<PokeballSelectorComponentComponent>;
+  let component: PokeballSelectorComponent;
+  let fixture: ComponentFixture<PokeballSelectorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PokeballSelectorComponentComponent ]
+      declarations: [ PokeballSelectorComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PokeballSelectorComponentComponent);
+    fixture = TestBed.createComponent(PokeballSelectorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
