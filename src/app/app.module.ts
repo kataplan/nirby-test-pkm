@@ -20,7 +20,7 @@ import { ToastModule } from 'primeng/toast';
 import { CardModule } from 'primeng/card';
 
 // Componets
-import { PokemonViewComponentComponent } from './components/pokemon-view-component/pokemon-view-component.component';
+import { PokemonViewComponent } from './components/pokemon-view/pokemonView.component';
 import { PokeballSelectorComponent } from './components/pokeballSelector/pokeballSelector.component';
 import { HomeComponent } from './views/home/home.component';
 import { GrassComponent } from './views/grass/grass.component';
@@ -31,7 +31,7 @@ import { RegisterComponent } from './components/register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PokemonViewComponentComponent,
+    PokemonViewComponent,
     PokeballSelectorComponent,
     HomeComponent,
     GrassComponent,
