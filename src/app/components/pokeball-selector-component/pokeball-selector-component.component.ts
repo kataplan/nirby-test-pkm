@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MenuItem, MessageService } from 'primeng/api';
 import { IPokemonRaw, Pokemon } from 'src/interfaces/pokemon';
-import { PokemonCaptureService } from 'src/services/pokemon-capture.service';
+import { PokemonCaptureService } from 'src/services/pokemonCapture.service';
 import { PokemonService } from 'src/services/pokemon.service';
 
 @Component({
