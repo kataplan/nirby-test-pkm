@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PokemonCapture, PokemonCaptureRaw } from 'src/interfaces/pokemon-capture';
+import { PokemonCapture, PokemonCaptureRaw } from 'src/interfaces/pokemonCapture';
 import { AuthService } from 'src/services/auth.service';
 import { PokemonCaptureService } from 'src/services/pokemon-capture.service';
 
