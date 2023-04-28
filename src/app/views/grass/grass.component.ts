@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Limit } from 'src/interfaces/limit';
+import { SpeciesList } from 'src/interfaces/speciesList';
 import { IPokemonRaw, IPokemonResult, Pokemon } from 'src/interfaces/pokemon';
 import { AuthService } from 'src/services/auth.service';
 import { PokemonService } from 'src/services/pokemon.service';
@@ -34,8 +34,8 @@ export class GrassComponent {
     this.router.navigate([str])
   }
   getFirstPokemon(): void {
-    this.pokemonServices.getPokemonLimit().subscribe(
-      (res: Limit) => {
+    this.pokemonServices.getPokemonSpeciesList().subscribe(
+      (res: SpeciesList) => {
         const lastPokemon: IPokemonResult = res.results[res.results.length - 1]
         console.log(lastPokemon);
         this.pokemonServices.getPokemonByName(lastPokemon.name).subscribe(
