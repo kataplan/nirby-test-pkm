@@ -23,7 +23,7 @@ export class RegisterComponent {
   ) { }
 
   onRegisterSubmit(): void {
-    this.authServices.register(this.registerForm.value)
+    this.authServices.register(this.registerForm.value.email, this.registerForm.value.password)
       .then(() =>  
         this.router.navigate(['']))
       .catch(error => console.log(error))

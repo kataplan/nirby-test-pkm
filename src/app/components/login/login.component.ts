@@ -22,7 +22,7 @@ export class LoginComponent {
   ) { }
 
   onLoginSubmit(): void {
-    this.authServices.login(this.loginForm.value)
+    this.authServices.login(this.loginForm.value.email, this.loginForm.value.password)
     this.loginForm.reset();
   }
   onGoogleSignIn(): void {
