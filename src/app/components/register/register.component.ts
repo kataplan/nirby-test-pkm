@@ -14,26 +14,31 @@ export class RegisterComponent {
     email: new FormControl(),
     password: new FormControl()
   });
-  
+
   constructor(
     private authServices: AuthService,
     private formBuilder: FormBuilder,
     private router: Router
 
   ) { }
-
+  /**
+   * Function to register a new user with a email and password.
+  */
   onRegisterSubmit(): void {
     this.authServices.register(this.registerForm.value.email, this.registerForm.value.password)
-      .then(() =>  
+      .then(() =>
         this.router.navigate(['']))
       .catch(error => console.log(error))
-    
+
     this.registerForm.reset();
   }
-  onGoogleSignIn():void{
+  /**
+  * Function to login/register a new user with a google authentication
+ */
+  onGoogleSignIn(): void {
     this.authServices.loginWithGoogle()
-    .then(() => {
-      this.router.navigate(['/grass'])
-    })
+      .then(() => {
+        this.router.navigate(['/grass'])
+      })
   }
 }
