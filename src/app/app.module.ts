@@ -21,7 +21,7 @@ import { CardModule } from 'primeng/card';
 
 // Componets
 import { PokemonViewComponentComponent } from './components/pokemon-view-component/pokemon-view-component.component';
-import { PokeballSelectorComponentComponent } from './components/pokeball-selector-component/pokeball-selector-component.component';
+import { PokeballSelectorComponent } from './components/pokeballSelector/pokeballSelector.component';
 import { HomeComponent } from './views/home/home.component';
 import { GrassComponent } from './views/grass/grass.component';
 import { CapturesComponent } from './views/captures/captures.component';
@@ -32,7 +32,7 @@ import { RegisterComponent } from './components/register/register.component';
   declarations: [
     AppComponent,
     PokemonViewComponentComponent,
-    PokeballSelectorComponentComponent,
+    PokeballSelectorComponent,
     HomeComponent,
     GrassComponent,
     LoginComponent,

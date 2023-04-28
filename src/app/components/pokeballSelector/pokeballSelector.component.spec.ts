@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PokeballSelectorComponentComponent } from './pokeball-selector-component.component';
+import { PokeballSelectorComponentComponent } from './pokeballSelector.component';
 
 describe('PokeballSelectorComponentComponent', () => {
   let component: PokeballSelectorComponentComponent;
