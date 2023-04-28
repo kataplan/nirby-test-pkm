@@ -18,14 +18,14 @@ export class GrassComponent {
     public pokemonServices: PokemonService,
   ) { }
 
-  ngOnInit():void {
+  ngOnInit(): void {
     this.getFirstPokemon()
   }
 
-   /**
-   * Function to logout and navigate to home page ("/")
-   */
-  logout():void {
+  /**
+  * Function to logout and navigate to home page ("/")
+  */
+  logout(): void {
     this.authServices.logout()
       .then(() => {
         this.router.navigate(['/'])
@@ -36,7 +36,7 @@ export class GrassComponent {
    * Function to navigate to a new page
    * @param str a string with a URL
    */
-  navigate(str: String):void {
+  navigate(str: String): void {
     this.router.navigate([str])
   }
   /**
