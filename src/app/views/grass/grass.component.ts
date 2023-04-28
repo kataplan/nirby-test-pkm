@@ -11,7 +11,6 @@ import { PokemonService } from 'src/services/pokemon.service';
   styleUrls: ['./grass.component.scss']
 })
 export class GrassComponent {
-  maxId: number = 0;
 
   constructor(
     private authServices: AuthService,
@@ -19,20 +18,34 @@ export class GrassComponent {
     public pokemonServices: PokemonService,
   ) { }
 
-
-  ngOnInit() {
+  ngOnInit():void {
     this.getFirstPokemon()
   }
 
-  logout() {
+   /**
+   * Function to logout and navigate to home page ("/")
+   */
+  logout():void {
     this.authServices.logout()
       .then(() => {
         this.router.navigate(['/'])
       })
   }
-  navigate(str: String) {
+
+  /**
+   * Function to navigate to a new page
+   * @param str a string with a URL
+   */
+  navigate(str: String):void {
     this.router.navigate([str])
   }
+  /**
+   * Function to get a random first pokemon from the pokemon API.
+   * First it gets the list of all species and get the last pokemon Name, 
+   * Second gets the this last pokemon and with the it's id (max limit) it calculate a random id.
+   * Then get a pokemon from that id and transform from a IPokemonRaw to a Pokemon interface 
+   * And the last step is to set the current pokemon to this new Pokemon.
+   */
   getFirstPokemon(): void {
     this.pokemonServices.getPokemonSpeciesList().subscribe(
       (res: SpeciesList) => {
@@ -41,19 +54,15 @@ export class GrassComponent {
         this.pokemonServices.getPokemonByName(lastPokemon.name).subscribe(
           (res: IPokemonRaw) => {
             console.log(res);
-            this.maxId = res.id;
-            this.pokemonServices.setMaxId(this.maxId)
-            const id = Math.round(this.maxId * Math.random())
+            this.pokemonServices.setMaxId(res.id)
+            const id = Math.round(res.id * Math.random())
             this.pokemonServices.getPokemon(id).subscribe(
               (res: IPokemonRaw) => {
-                console.log(res.name);
-
                 const newPokemon: Pokemon = {
                   pokemonId: res.id,
                   pokemonName: res.name,
                   pokemonType: res.types.map(({ type }) => type.name),
                   pokemonImageUrl: res.sprites.front_default
-
                 }
                 this.pokemonServices.setCurrentPokemon(newPokemon)
               }
