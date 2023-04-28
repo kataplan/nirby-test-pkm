@@ -20,11 +20,17 @@ export class LoginComponent {
     private router: Router
 
   ) { }
-
+  /**
+   * Function to login a existing user with a email and password.
+  */
   onLoginSubmit(): void {
     this.authServices.login(this.loginForm.value.email, this.loginForm.value.password)
     this.loginForm.reset();
   }
+
+  /**
+   * Function to login/register a new user with a google authentication
+  */
   onGoogleSignIn(): void {
     this.authServices.loginWithGoogle()
     this.loginForm.reset();
